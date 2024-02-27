@@ -13,6 +13,7 @@ namespace app
         private List<Team> teams;
         private List<Student> students;
         private List<Competition> competitions;
+        private List<Match> matches;
 
         private const string DatabaseFile = "football_database.txt";
 
@@ -22,6 +23,7 @@ namespace app
             teams = new List<Team>();
             students = new List<Student>();
             competitions = new List<Competition>();
+            matches = new List<Match>();
 
             LoadDataFromDatabase();
         }
@@ -148,6 +150,31 @@ namespace app
             }
 
             File.WriteAllLines(DatabaseFile, lines);
+        }
+        public void ScheduleMatch(string team1Name, string team2Name, DateTime date)
+        {
+            Team team1 = teams.Find(t => t.Name == team1Name);
+            Team team2 = teams.Find(t => t.Name == team2Name);
+
+            if (team1 != null && team2 != null)
+            {
+                Match match = new Match(team1, team2, date);
+                matches.Add(match);
+                SaveDataToDatabase();
+            }
+            else
+            {
+                Console.WriteLine("One or both teams not found.");
+            }
+        }
+
+        public void DisplayMatches()
+        {
+            Console.WriteLine("Scheduled Matches:");
+            foreach (var match in matches)
+            {
+                match.DisplayMatchDetails();
+            }
         }
     }
 }

@@ -15,8 +15,10 @@ class Program
             Console.WriteLine("2. Add Team");
             Console.WriteLine("3. Register Student");
             Console.WriteLine("4. Organize Competition");
-            Console.WriteLine("5. Display Information");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("5. Schedule Match");
+            Console.WriteLine("6. Display Information");
+            Console.WriteLine("7. Display Matches");
+            Console.WriteLine("8. Exit");
 
             Console.Write("Select option: ");
             string choice = Console.ReadLine();
@@ -53,10 +55,25 @@ class Program
                     break;
 
                 case "5":
-                    schoolSystem.DisplayInformation();
+                    Console.Write("Enter first team name: ");
+                    string team1Name = Console.ReadLine();
+                    Console.Write("Enter second team name: ");
+                    string team2Name = Console.ReadLine();
+                    Console.Write("Enter match date (yyyy-MM-dd): ");
+                    DateTime matchDate = DateTime.Parse(Console.ReadLine());
+
+                    schoolSystem.ScheduleMatch(team1Name, team2Name, matchDate);
                     break;
 
                 case "6":
+                    schoolSystem.DisplayInformation();
+                    break;
+
+                case "7":
+                    schoolSystem.DisplayMatches();
+                    break;
+
+                case "8":
                     Environment.Exit(0);
                     break;
 

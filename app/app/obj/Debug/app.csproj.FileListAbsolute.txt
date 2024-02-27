@@ -5,3 +5,10 @@ C:\Users\zomba\Desktop\app\app\obj\Debug\app.csproj.AssemblyReference.cache
 C:\Users\zomba\Desktop\app\app\obj\Debug\app.csproj.CoreCompileInputs.cache
 C:\Users\zomba\Desktop\app\app\obj\Debug\app.exe
 C:\Users\zomba\Desktop\app\app\obj\Debug\app.pdb
+C:\Users\zomba\Desktop\app\app\app\bin\Debug\app.exe.config
+C:\Users\zomba\Desktop\app\app\app\bin\Debug\app.exe
+C:\Users\zomba\Desktop\app\app\app\bin\Debug\app.pdb
+C:\Users\zomba\Desktop\app\app\app\obj\Debug\app.csproj.AssemblyReference.cache
+C:\Users\zomba\Desktop\app\app\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+C:\Users\zomba\Desktop\app\app\app\obj\Debug\app.exe
+C:\Users\zomba\Desktop\app\app\app\obj\Debug\app.pdb
